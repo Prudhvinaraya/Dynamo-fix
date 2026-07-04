@@ -1,0 +1,93 @@
+{
+    "id": "80a68038-665c-4a47-b1f8-afaaf3f93dc1",
+    "task_name": "dynamo/log-report",
+    "trial_name": "log-report__dRY27mG",
+    "trial_uri": "file:///E:/Freelancing/Dynamo-fix/log-report/jobs/2026-07-03__21-39-01/log-report__dRY27mG",
+    "task_id": {
+        "path": "."
+    },
+    "source": null,
+    "task_checksum": "ec41b3bdf6bae19340f0270d7b5f8d91d51c48b22a2dd64e7366b350e8c91416",
+    "config": {
+        "task": {
+            "path": ".",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "log-report__dRY27mG",
+        "trials_dir": "jobs\\2026-07-03__21-39-01",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "nop",
+            "import_path": null,
+            "model_name": null,
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {},
+            "mcp_servers": []
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "job_id": "4d7502c1-96a2-4d64-a00e-c55771e63661"
+    },
+    "agent_info": {
+        "name": "nop",
+        "version": "1.0.0",
+        "model_info": null
+    },
+    "agent_result": null,
+    "verifier_result": null,
+    "exception_info": {
+        "exception_type": "RuntimeError",
+        "exception_message": "Docker compose command failed for environment log-report. Command: docker compose --project-name log-report__dry27mg__env --project-directory E:\\Freelancing\\Dynamo-fix\\log-report\\environment -f C:\\Users\\hp\\AppData\\Local\\Temp\\tmpf8st1rwe\\log-report__dRY27mG__env-docker-compose-resources.json -f C:\\Users\\hp\\AppData\\Roaming\\uv\\tools\\harbor\\Lib\\site-packages\\harbor\\environments\\docker\\docker-compose-build.yaml -f C:\\Users\\hp\\AppData\\Local\\Temp\\tmpsr9mw906\\docker-compose-mounts.json -f C:\\Users\\hp\\AppData\\Roaming\\uv\\tools\\harbor\\Lib\\site-packages\\harbor\\environments\\docker\\docker-compose-egress-control.yaml -f C:\\Users\\hp\\AppData\\Local\\Temp\\tmpa625bdq_\\docker-compose-egress-control-services.json build. Return code: 1. Stdout:  Image log-report__dry27mg__env-main Building \n#1 [internal] load local bake definitions\n#1 reading from stdin 583B done\n#1 DONE 0.0s\n\n#2 [internal] load build definition from Dockerfile\n#2 transferring dockerfile: 468B 0.0s done\n#2 DONE 0.1s\n\n#3 [internal] load metadata for docker.io/library/python:3.11-slim-bookworm@sha256:c06037dae61c33f27bcda233a00fdbb7964b73b5cf2d5b62b0833cd6c9ecfb97\n#3 ERROR: docker.io/library/python:3.11-slim-bookworm@sha256:c06037dae61c33f27bcda233a00fdbb7964b73b5cf2d5b62b0833cd6c9ecfb97: not found\n------\n > [internal] load metadata for docker.io/library/python:3.11-slim-bookworm@sha256:c06037dae61c33f27bcda233a00fdbb7964b73b5cf2d5b62b0833cd6c9ecfb97:\n------\nDockerfile:1\n\n--------------------\n\n   1 | >>> FROM python:3.11-slim-bookworm@sha256:c06037dae61c33f27bcda233a00fdbb7964b73b5cf2d5b62b0833cd6c9ecfb97\n\n   2 |     \n\n   3 |     WORKDIR /app\n\n--------------------\n\nfailed to solve: python:3.11-slim-bookworm@sha256:c06037dae61c33f27bcda233a00fdbb7964b73b5cf2d5b62b0833cd6c9ecfb97: failed to resolve source metadata for docker.io/library/python:3.11-slim-bookworm@sha256:c06037dae61c33f27bcda233a00fdbb7964b73b5cf2d5b62b0833cd6c9ecfb97: docker.io/library/python:3.11-slim-bookworm@sha256:c06037dae61c33f27bcda233a00fdbb7964b73b5cf2d5b62b0833cd6c9ecfb97: not found\n\n. Stderr: None. ",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\hp\\AppData\\Roaming\\uv\\tools\\harbor\\Lib\\site-packages\\harbor\\trial\\trial.py\", line 350, in run\n    await self._prepare()\n  File \"C:\\Users\\hp\\AppData\\Roaming\\uv\\tools\\harbor\\Lib\\site-packages\\harbor\\trial\\trial.py\", line 379, in _prepare\n    await self._setup_agent_environment()\n  File \"C:\\Users\\hp\\AppData\\Roaming\\uv\\tools\\harbor\\Lib\\site-packages\\harbor\\trial\\trial.py\", line 1095, in _setup_agent_environment\n    await self._start_agent_environment()\n  File \"C:\\Users\\hp\\AppData\\Roaming\\uv\\tools\\harbor\\Lib\\site-packages\\harbor\\trial\\trial.py\", line 1101, in _start_agent_environment\n    await asyncio.wait_for(\n    ...<4 lines>...\n    )\n  File \"C:\\Python314\\Lib\\asyncio\\tasks.py\", line 488, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"C:\\Users\\hp\\AppData\\Roaming\\uv\\tools\\harbor\\Lib\\site-packages\\harbor\\environments\\docker\\docker.py\", line 859, in start\n    await self._run_docker_compose_command([\"build\"])\n  File \"C:\\Users\\hp\\AppData\\Roaming\\uv\\tools\\harbor\\Lib\\site-packages\\harbor\\environments\\docker\\docker.py\", line 625, in _run_docker_compose_command\n    raise RuntimeError(\n    ...<5 lines>...\n    )\nRuntimeError: Docker compose command failed for environment log-report. Command: docker compose --project-name log-report__dry27mg__env --project-directory E:\\Freelancing\\Dynamo-fix\\log-report\\environment -f C:\\Users\\hp\\AppData\\Local\\Temp\\tmpf8st1rwe\\log-report__dRY27mG__env-docker-compose-resources.json -f C:\\Users\\hp\\AppData\\Roaming\\uv\\tools\\harbor\\Lib\\site-packages\\harbor\\environments\\docker\\docker-compose-build.yaml -f C:\\Users\\hp\\AppData\\Local\\Temp\\tmpsr9mw906\\docker-compose-mounts.json -f C:\\Users\\hp\\AppData\\Roaming\\uv\\tools\\harbor\\Lib\\site-packages\\harbor\\environments\\docker\\docker-compose-egress-control.yaml -f C:\\Users\\hp\\AppData\\Local\\Temp\\tmpa625bdq_\\docker-compose-egress-control-services.json build. Return code: 1. Stdout:  Image log-report__dry27mg__env-main Building \n#1 [internal] load local bake definitions\n#1 reading from stdin 583B done\n#1 DONE 0.0s\n\n#2 [internal] load build definition from Dockerfile\n#2 transferring dockerfile: 468B 0.0s done\n#2 DONE 0.1s\n\n#3 [internal] load metadata for docker.io/library/python:3.11-slim-bookworm@sha256:c06037dae61c33f27bcda233a00fdbb7964b73b5cf2d5b62b0833cd6c9ecfb97\n#3 ERROR: docker.io/library/python:3.11-slim-bookworm@sha256:c06037dae61c33f27bcda233a00fdbb7964b73b5cf2d5b62b0833cd6c9ecfb97: not found\n------\n > [internal] load metadata for docker.io/library/python:3.11-slim-bookworm@sha256:c06037dae61c33f27bcda233a00fdbb7964b73b5cf2d5b62b0833cd6c9ecfb97:\n------\nDockerfile:1\n\n--------------------\n\n   1 | >>> FROM python:3.11-slim-bookworm@sha256:c06037dae61c33f27bcda233a00fdbb7964b73b5cf2d5b62b0833cd6c9ecfb97\n\n   2 |     \n\n   3 |     WORKDIR /app\n\n--------------------\n\nfailed to solve: python:3.11-slim-bookworm@sha256:c06037dae61c33f27bcda233a00fdbb7964b73b5cf2d5b62b0833cd6c9ecfb97: failed to resolve source metadata for docker.io/library/python:3.11-slim-bookworm@sha256:c06037dae61c33f27bcda233a00fdbb7964b73b5cf2d5b62b0833cd6c9ecfb97: docker.io/library/python:3.11-slim-bookworm@sha256:c06037dae61c33f27bcda233a00fdbb7964b73b5cf2d5b62b0833cd6c9ecfb97: not found\n\n. Stderr: None. \n",
+        "occurred_at": "2026-07-03T21:39:07.845272"
+    },
+    "started_at": "2026-07-03T16:09:05.362937Z",
+    "finished_at": "2026-07-03T16:09:08.378768Z",
+    "environment_setup": {
+        "started_at": "2026-07-03T16:09:05.658735Z",
+        "finished_at": "2026-07-03T16:09:07.842347Z"
+    },
+    "agent_setup": null,
+    "agent_execution": null,
+    "verifier": null,
+    "step_results": null
+}

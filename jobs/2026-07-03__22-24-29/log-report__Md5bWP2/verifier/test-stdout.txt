@@ -1,0 +1,50 @@
+============================= test session starts ==============================
+platform linux -- Python 3.11.15, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collected 3 items
+
+../tests/test_outputs.py EEE                                             [100%]
+
+==================================== ERRORS ====================================
+______________ ERROR at setup of test_criterion_1_file_and_format ______________
+
+    @pytest.fixture(scope="module")
+    def load_report():
+>       assert os.path.exists(REPORT_PATH), f"Output file missing at {REPORT_PATH}"
+E       AssertionError: Output file missing at /app/report.json
+E       assert False
+E        +  where False = <function exists at 0x79cfed40f420>('/app/report.json')
+E        +    where <function exists at 0x79cfed40f420> = <module 'posixpath' (frozen)>.exists
+E        +      where <module 'posixpath' (frozen)> = os.path
+
+/tests/test_outputs.py:9: AssertionError
+________________ ERROR at setup of test_criterion_2_log_metrics ________________
+
+    @pytest.fixture(scope="module")
+    def load_report():
+>       assert os.path.exists(REPORT_PATH), f"Output file missing at {REPORT_PATH}"
+E       AssertionError: Output file missing at /app/report.json
+E       assert False
+E        +  where False = <function exists at 0x79cfed40f420>('/app/report.json')
+E        +    where <function exists at 0x79cfed40f420> = <module 'posixpath' (frozen)>.exists
+E        +      where <module 'posixpath' (frozen)> = os.path
+
+/tests/test_outputs.py:9: AssertionError
+_______________ ERROR at setup of test_criterion_3_top_endpoint ________________
+
+    @pytest.fixture(scope="module")
+    def load_report():
+>       assert os.path.exists(REPORT_PATH), f"Output file missing at {REPORT_PATH}"
+E       AssertionError: Output file missing at /app/report.json
+E       assert False
+E        +  where False = <function exists at 0x79cfed40f420>('/app/report.json')
+E        +    where <function exists at 0x79cfed40f420> = <module 'posixpath' (frozen)>.exists
+E        +      where <module 'posixpath' (frozen)> = os.path
+
+/tests/test_outputs.py:9: AssertionError
+=========================== short test summary info ============================
+ERROR ../tests/test_outputs.py::test_criterion_1_file_and_format - AssertionE...
+ERROR ../tests/test_outputs.py::test_criterion_2_log_metrics - AssertionError...
+ERROR ../tests/test_outputs.py::test_criterion_3_top_endpoint - AssertionErro...
+============================== 3 errors in 0.04s ===============================

@@ -1,0 +1,32 @@
+artifacts = ["/app/report.json"]
+
+[task]
+name = "dynamo/log-report"
+description = "Parse an HTTP server access log to generate a structured JSON report summarizing request totals, unique clients, and top endpoints."
+
+[metadata]
+category = "data_processing"
+subcategory = "log_parsing"
+task_objective = ["extract_metrics", "generate_json_report"]
+artifact_type = ["json"]
+expert_time_estimate_hours = 0.5
+model_tested = "GPT-5.4"
+agent_tested = "Terminus-2"
+difficulty_explanation = "Requires parsing standard web server logs, tracking unique IP instances, counting request endpoints, and structuring output data."
+solution_explanation = "A Python script reads /app/access.log, tallies request rows, structures a unique IP set, tracks the most frequent URL path, and saves the dictionary object to /app/report.json."
+verification_explanation = "The verifier confirms that /app/report.json contains the exact calculated fields matching the log summary profile."
+
+[verifier]
+timeout_sec = 120.0
+
+[agent]
+timeout_sec = 120.0
+
+[environment]
+build_timeout_sec = 600.0
+cpus = 1
+memory_mb = 2048
+storage_mb = 10240
+gpus = 0
+allow_internet = true
+mcp_servers = []
